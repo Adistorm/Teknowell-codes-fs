@@ -1,0 +1,89 @@
+/* General Styling & Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}  
+
+body {
+    display: flex;
+    
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #bc5cc3, #04132c);
+}
+
+/* Calculator Main Container */
+.calculator {
+    position: relative;
+    width: 500px;
+    padding: 50px;
+    border-radius: 50px;
+    background: rgba(23, 0, 19, 0.892);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+} 
+
+/* Display Screen */
+.display input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: right;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid rgba(213, 13, 13, 0.2);
+    border-radius: 50px;
+}
+
+/* Buttons Grid Layout */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* General Button Styling */
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.clear {
+    color: #ff4d4d; /* Red for clear button */
+}
+
+.equal-btn {
+    grid-column: span 2; /* Make the equals button wider */
+    background: #fb7c14; /* Orange for emphasis */
+    color: #ffffff;
+    border: none;
+}
+
+.equal-btn:hover {
+    background: #e06c12;
+}
+
+

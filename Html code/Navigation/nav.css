@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: blue;
+    color:aliceblue;
+    text-align: center;
+}
+
+ul{
+    background-color: black;
+  
+}
+ ul li{
+    background-color: lightgray;
+    display : inline-block;
+    padding: 10px;
+    position:sticky;
+    
+ }
+
+ ul li:hover {
+    background-color: green;
+    color: white;
+    padding-left: 25px;
+    transition: 1s;
+    
+ }

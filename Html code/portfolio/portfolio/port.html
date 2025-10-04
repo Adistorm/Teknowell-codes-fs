@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Petewar - Portfolio</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .form-input {
+            @apply w-full p-4 rounded-xl border border-gray-700 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all duration-300;
+        }
+        .form-label {
+            @apply flex items-center space-x-3 text-gray-400;
+        }
+        /* Custom typing effect for the title text */
+        .typing-cursor {
+            border-right: 2px solid;
+            animation: blink 0.75s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #FFD700 }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 z-50 w-full bg-gray-900 bg-opacity-95 backdrop-blur-sm shadow-sm border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-yellow-400">Aditya Petewar</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">About</a>
+                <a href="#education" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Education</a>
+                <a href="#experience" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Experience</a>
+                <a href="#skills" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Skills</a>
+                <a href="#projects" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Projects</a>
+                <a href="#certificates" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Certificates</a>
+                <a href="#contact" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200 font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-400 hover:text-yellow-400 focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-lg">
+            <div class="flex flex-col items-center py-4 space-y-4">
+                <a href="#about" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">About</a>
+                <a href="#education" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Education</a>
+                <a href="#experience" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Experience</a>
+                <a href="#skills" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Skills</a>
+                <a href="#projects" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Projects</a>
+                <a href="#certificates" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Certificates</a>
+                <a href="#contact" class="text-gray-400 hover:text-yellow-400 font-medium" onclick="toggleMenu()">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 pt-24 pb-16">
+        <!-- New Hero Section based on the image -->
+        <header class="mb-20 p-8 rounded-3xl bg-gray-800 shadow-sm border border-gray-700">
+            <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-12">
+                <!-- Left side content (Text and social links) -->
+                <div class="w-full md:w-2/3 mb-8 md:mb-0">
+                    <p class="text-3xl md:text-4xl font-semibold mb-2 text-white">Hi There,</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">I'm Aditya Petewar</h1>
+                    <!-- Dynamic Title Text -->
+                    <p class="text-xl md:text-2xl text-yellow-400 font-medium mb-8">
+                        I Am into <span id="dev-title" class="typing-cursor"></span>
+                    </p>
+                    <a href="#about" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-3 px-6 rounded-full text-lg shadow-md mb-6">
+                        About Me <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
+                            <i class="fab fa-linkedin-in text-3xl"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
+                            <i class="fab fa-twitter text-3xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
+                            <i class="fab fa-github text-3xl"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right side content (Profile Picture) -->
+                <div class="w-full md:w-1/3 flex-shrink-0 flex justify-center items-center">
+                    <img src="" alt="Aditya Petewar" class="w-64 h-64 md:w-full md:h-auto rounded-full object-cover border-8 border-gray-800 shadow-xl">
+                </div>
+            </div>
+        </header>
+
+        <!-- About Me Section based on the image -->
+        <section id="about" class="mb-20">
+            <div class="flex justify-center">
+                <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 shadow-sm w-full max-w-5xl">
+                    <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
+                        <!-- Image Column -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 mb-6 md:mb-0">
+                            <img src="C:\Users\adity\Desktop\Html code\portfolio\portfolio\aditya.jpg" alt="Aditya Petewar">
+                        </div>
+                        <!-- Text Content Column -->
+                        <div class="w-full md:w-2/3">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <i class="fas fa-user-circle text-4xl text-yellow-400"></i>
+                                <h2 class="text-4xl font-bold text-white">About Me</h2>
+                            </div>
+                            <h3 class="text-3xl font-bold text-yellow-400 mb-2">I'm Aditya</h3>
+                            <p class="text-lg font-semibold text-gray-300 mb-4">Full Stack Developer</p>
+                            <p class="text-gray-400 text-base leading-relaxed mb-6">
+                                I am a SOFTWARE ENGINEER based in Pune, India. I am an Information Technology undergraduate from Pimpri-Chinchwad College of Engineering (Aff. SPPU). I am capable to adapt to any Technologies to fit in any kind of work role especially developing applications & websites. I am currently working on MERN Stack to build WebApps and Websites. I am a Full-Stack developer working for myself to improve my skills. Love to build Full-Stack utility webapps.
+                            </p>
+                            <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-3 px-6 rounded-full text-lg shadow-md">
+                                Resume <i class="fas fa-angle-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-yellow-400">
+                <i class="fas fa-graduation-cap text-yellow-400 mr-2"></i>My Education
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- HSC Science Card -->
+               
+                <!-- Diploma in Computer Science Card -->
+                <div class="bg-gray-800 p-6 rounded-3xl border border-gray-700 shadow-sm transition-transform transform hover:scale-105">
+                    <div class="flex items-center space-x-6">
+                        <img src="https://placehold.co/120x120/1C1C1C/FFD700?text=Diploma" alt="Yogeshwari Polytechnic" class="w-32 h-32 rounded-2xl object-cover">
+                        <div>
+                            <h3 class="font-bold text-2xl text-yellow-400">Diploma in Computer Science</h3>
+                            <p class="text-gray-300 font-medium">Yogeshwari Polytechnic, Ambajogai, Beed</p>
+                            <p class="text-gray-400 text-sm mt-2">2022-2024 | Completed | Aggregate: 91.31%</p>
+                            <p class="text-gray-400 text-sm">Topper Scorer | DSE MH-Rank 1100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bachelor of Technology Card -->
+                <div class="bg-gray-800 p-6 rounded-3xl border border-gray-700 shadow-sm transition-transform transform hover:scale-105">
+                    <div class="flex items-center space-x-6">
+                        <img src="https://placehold.co/120x120/1C1C1C/FFD700?text=College" alt="Pimpri-Chinchwad College" class="w-32 h-32 rounded-2xl object-cover">
+                        <div>
+                            <h3 class="font-bold text-2xl text-yellow-400">Bachelor Of Technology In Information Technology</h3>
+                            <p class="text-gray-300 font-medium">Pimpri-Chinchwad College Of Engineering Pune | SPPU</p>
+                            <p class="text-gray-400 text-sm mt-2">2024-2027 | Pursuing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (New Timeline Style) -->
+        <section id="experience" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white">
+                <i class="fas fa-briefcase text-yellow-400 mr-2"></i>Experience
+            </h2>
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <!-- Timeline vertical line -->
+                <div class="absolute border-opacity-20 border-l-2 border-yellow-400 h-full left-1/2 transform -translate-x-1/2"></div>
+
+                <!-- Left side entry (Shree Soft Tech Internship) -->
+                <div class="mb-8 flex justify-start items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-yellow-400 shadow-xl w-8 h-8 rounded-full">
+                        <i class="fas fa-laptop-code text-gray-900 mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-gray-800 rounded-3xl shadow-xl w-5/12 px-6 py-4 border border-gray-700 text-white">
+                        <h3 class="font-bold text-xl md:text-2xl text-yellow-400">Intern (Advanced Java)</h3>
+                        <p class="text-sm">2019</p>
+                        <p class="text-sm font-light mt-2 text-gray-300">Shree Soft Tech</p>
+                    </div>
+                </div>
+
+                <!-- Right side entry (Zidio Development Internship) -->
+                <div class="mb-8 flex justify-end items-center w-full left-timeline">
+                    <div class="order-1 bg-gray-800 rounded-3xl shadow-xl w-5/12 px-6 py-4 border border-gray-700 text-white">
+                        <h3 class="font-bold text-xl md:text-2xl text-yellow-400">Intern (Full-Stack Developer)</h3>
+                        <p class="text-sm">2019</p>
+                        <p class="text-sm font-light mt-2 text-gray-300">Zidio Development (Bangalore)</p>
+                    </div>
+                    <div class="z-20 flex items-center order-1 bg-yellow-400 shadow-xl w-8 h-8 rounded-full">
+                        <i class="fas fa-laptop-code text-gray-900 mx-auto"></i>
+                    </div>
+                    <div class="order-1 w-5/12"></div>
+                </div>
+
+                <!-- Left side entry (Teknowell Internship) -->
+                <div class="mb-8 flex justify-start items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-yellow-400 shadow-xl w-8 h-8 rounded-full">
+                        <i class="fas fa-laptop-code text-gray-900 mx-auto"></i>
+                    </div>
+                    <div class="order-1 bg-gray-800 rounded-3xl shadow-xl w-5/12 px-6 py-4 border border-gray-700 text-white">
+                        <h3 class="font-bold text-xl md:text-2xl text-yellow-400">Intern (IT Solutions)</h3>
+                        <p class="text-sm">Present</p>
+                        <p class="text-sm font-light mt-2 text-gray-300">Teknowell IT Solutions (Chinchwad)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reverted Skills Section -->
+        <section id="skills" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-yellow-400">
+                <i class="fas fa-laptop-code text-yellow-400 mr-2"></i>Skills & Abilities
+            </h2>
+            <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 shadow-sm">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Java & Backend -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-java text-4xl text-blue-600"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Java & Spring Boot</h4>
+                            <p class="text-gray-400 text-sm">Backend Development</p>
+                        </div>
+                    </div>
+                    <!-- Frontend -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-react text-4xl text-cyan-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">React & Web</h4>
+                            <p class="text-gray-400 text-sm">Frontend Development</p>
+                        </div>
+                    </div>
+                    <!-- Database -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-database text-4xl text-yellow-400"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">MySQL & MongoDB</h4>
+                            <p class="text-gray-400 text-sm">Database Management</p>
+                        </div>
+                    </div>
+                    <!-- Python & Data Science -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-python text-4xl text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Python & AI</h4>
+                            <p class="text-gray-400 text-sm">Data Science & AI/ML</p>
+                        </div>
+                    </div>
+                    <!-- C++ -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-cuttlefish text-4xl text-purple-600"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">C++</h4>
+                            <p class="text-gray-400 text-sm">Programming</p>
+                        </div>
+                    </div>
+                    <!-- Version Control -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fab fa-git-alt text-4xl text-red-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Git & GitHub</h4>
+                            <p class="text-gray-400 text-sm">Version Control</p>
+                        </div>
+                    </div>
+                    <!-- Power BI -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-chart-bar text-4xl text-blue-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Power BI</h4>
+                            <p class="text-gray-400 text-sm">Data Visualization</p>
+                        </div>
+                    </div>
+                    <!-- Tableau -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-table text-4xl text-blue-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Tableau</h4>
+                            <p class="text-gray-400 text-sm">Data Analysis</p>
+                        </div>
+                    </div>
+                    <!-- Excel -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-file-excel text-4xl text-green-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Excel</h4>
+                            <p class="text-gray-400 text-sm">Data Management</p>
+                        </div>
+                    </div>
+                    <!-- Deployment -->
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-cloud text-4xl text-gray-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Heroku & Netlify</h4>
+                            <p class="text-gray-400 text-sm">Deployment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-yellow-400">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Project 1: Spotify Music Player -->
+                <div class="bg-gray-800 p-4 rounded-3xl border border-gray-700 shadow-sm flex flex-col transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x400/1C1C1C/FFD700?text=Spotify+Clone" alt="Spotify Music Player project graphic" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-yellow-400">Spotify Music Player</h3>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        A web-based music player application with features like music streaming, playlist management, and user authentication, inspired by the Spotify experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Java</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Spring Boot</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">REST API</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">React</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="#" class="inline-block bg-gray-700 hover:bg-gray-600 transition-colors duration-300 text-gray-200 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: BALSEVIKA -->
+                <div class="bg-gray-800 p-4 rounded-3xl border border-gray-700 shadow-sm flex flex-col transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x400/1C1C1C/FFD700?text=BALSEVIKA+Project" alt="BALSEVIKA project graphic" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-yellow-400">BALSEVIKA - Anganwadi Management</h3>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        A comprehensive web application designed to help Anganwadi Sevikas manage their daily tasks, including tracking child growth, providing teaching materials, and improving communication.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Java</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Spring Boot</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">MySQL</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="#" class="inline-block bg-gray-700 hover:bg-gray-600 transition-colors duration-300 text-gray-200 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fas fa-file-alt mr-2"></i>Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Food Court Manager -->
+                <div class="bg-gray-800 p-4 rounded-3xl border border-gray-700 shadow-sm flex flex-col transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x400/1C1C1C/FFD700?text=Food+Court+App" alt="Food Court Manager project graphic" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-yellow-400">Food Court Manager</h3>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        A full-stack application designed to manage operations within a food court. Features include order management, payment processing, and real-time updates for both staff and customers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Java</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Spring Boot</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">REST APIs</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="#" class="inline-block bg-gray-700 hover:bg-gray-600 transition-colors duration-300 text-gray-200 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                        </a>
+                    </div>
+                    </div>
+
+                <!-- Project 4: UrbanHeatAI -->
+                <div class="bg-gray-800 p-4 rounded-3xl border border-gray-700 shadow-sm flex flex-col transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x400/1C1C1C/FFD700?text=UrbanHeatAI+Project" alt="UrbanHeatAI project graphic" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-yellow-400">UrbanHeatAI</h3>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        An AI-powered system that analyzes satellite imagery and weather data to detect and map urban heat islands. The system also suggests solutions like green roofs and tree planting zones to combat climate change in urban areas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Python</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Computer Vision</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">TensorFlow</span>
+                        <span class="bg-gray-700 text-sm font-medium px-3 py-1 rounded-full text-gray-300">Satellite Imagery</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 text-gray-900 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                        <a href="#" class="inline-block bg-gray-700 hover:bg-gray-600 transition-colors duration-300 text-gray-200 font-semibold py-2 px-4 rounded-full text-sm">
+                            <i class="fas fa-file-alt mr-2"></i>Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section (New) -->
+        <section id="certificates" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-yellow-400">
+                <i class="fas fa-certificate text-yellow-400 mr-2"></i>My Certificates
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Placeholder Certificate Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-3xl border border-gray-700 shadow-sm transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/1C1C1C/FFD700?text=Certificate+1" alt="Certificate 1" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="font-bold text-2xl text-yellow-400">AWS Certified Cloud Practitioner</h3>
+                    <p class="text-gray-300 text-sm">Issued by Amazon Web Services</p>
+                    <a href="#" target="_blank" class="block mt-4 text-yellow-400 hover:text-yellow-500 transition-colors duration-200">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+                <!-- Placeholder Certificate Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-3xl border border-gray-700 shadow-sm transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/1C1C1C/FFD700?text=Certificate+2" alt="Certificate 2" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="font-bold text-2xl text-yellow-400">Python for Data Science</h3>
+                    <p class="text-gray-300 text-sm">Issued by Coursera</p>
+                    <a href="#" target="_blank" class="block mt-4 text-yellow-400 hover:text-yellow-500 transition-colors duration-200">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+                <!-- Placeholder Certificate Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-3xl border border-gray-700 shadow-sm transition-transform transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/1C1C1C/FFD700?text=Certificate+3" alt="Certificate 3" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="font-bold text-2xl text-yellow-400">Tableau Analyst Professional</h3>
+                    <p class="text-gray-300 text-sm">Issued by Tableau</p>
+                    <a href="#" target="_blank" class="block mt-4 text-yellow-400 hover:text-yellow-500 transition-colors duration-200">
+                        View Credential <i class="fas fa-external-link-alt ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section based on the image -->
+        <section id="contact" class="mb-20">
+            <div class="flex justify-center">
+                <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 shadow-sm w-full max-w-4xl">
+                    <!-- Heading -->
+                    <div class="flex flex-col items-center mb-8">
+                        <i class="fas fa-headset text-4xl text-purple-600 mb-2"></i>
+                        <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                        <!-- Illustration (left side) -->
+                        <div class="w-full md:w-1/2 flex justify-center items-center p-4">
+                            <!-- Placeholder image to simulate the graphic from the user's image -->
+                            <img src="https://placehold.co/400x400/1C1C1C/FFD700?text=Contact+Us" alt="Illustration of a person at a desk" class="w-full h-auto rounded-2xl">
+                        </div>
+                        <!-- Contact Form (right side) -->
+                        <div class="w-full md:w-1/2">
+                            <form action="#" method="POST" class="space-y-6">
+                                <div>
+                                    <input type="text" id="name" name="name" placeholder="Name" class="form-input">
+                                </div>
+                                <div>
+                                    <input type="email" id="email" name="email" placeholder="Email" class="form-input">
+                                </div>
+                                <div>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone" class="form-input">
+                                </div>
+                                <div>
+                                    <textarea id="message" name="message" rows="6" placeholder="Message" class="form-input"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full py-4 px-6 text-gray-900 font-semibold rounded-xl bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2">
+                                        <i class="fas fa-paper-plane mr-2"></i>Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-10">
+            <p>&copy; 2024 Aditya Petewar. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        const devTitles = ["Frontend Developer!", "Backend Developer!", "Data Science Enthusiast!", "Problem Solving!", "Web Development!"];
+        const devTitleElement = document.getElementById('dev-title');
+        let currentTitleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeTitle() {
+            const currentText = devTitles[currentTitleIndex];
+            
+            if (isDeleting) {
+                // Delete one character at a time
+                devTitleElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                // Type one character at a time
+                devTitleElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            // Check if the word is fully typed
+            if (!isDeleting && charIndex === currentText.length) {
+                // Pause at the end of the word
+                isDeleting = true;
+                setTimeout(typeTitle, 1500); // Pause for 1.5 seconds before deleting
+            } else if (isDeleting && charIndex === 0) {
+                // Done deleting, move to the next word
+                isDeleting = false;
+                currentTitleIndex = (currentTitleIndex + 1) % devTitles.length;
+                setTimeout(typeTitle, 500); // Pause briefly before typing the next word
+            } else {
+                // Continue typing or deleting
+                const typingSpeed = isDeleting ? 75 : 100; // Faster deletion
+                setTimeout(typeTitle, typingSpeed);
+            }
+        }
+
+        // Start the typing animation
+        window.onload = function() {
+            typeTitle();
+        };
+    </script>
+</body>
+</html>

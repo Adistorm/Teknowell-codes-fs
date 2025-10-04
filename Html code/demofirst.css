@@ -1,0 +1,158 @@
+ #heightwidth
+ {
+    border: 5px solid green;
+    height:500px;
+    width:500px;
+ }
+
+ #cursor
+ {
+    border: 5px solid red;
+    cursor: pointer;
+    height:300px;
+    width:300px;
+
+    /* cursor type */
+  
+    cursor:not-allowed
+
+    /*  all-scroll help to resize the pointer */
+ }
+
+#textalign
+{
+    border: 5px solid blue;
+    text-align: justify;  /* left , right , justify */ 
+
+    text-transform: capitalize;
+    text-decoration :overline;
+    direction: ltr;  /* rtl , ltr  0r auto */;
+
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    cursor: not-allowed;    
+
+}
+#padding
+{
+    border: 5px solid rgb(238, 0, 255);
+    padding: 50px 20px 10px 40px; /* top right bottom left */
+
+    text-decoration: dashed underline;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+#margin
+{
+    border: 5px solid orange;
+    margin: 50px 20px 10px 40px; /* top right bottom left */
+
+    text-decoration: wavy underline;
+    text-transform: lowercase;
+    text-align: center;
+    cursor: help;
+}
+
+table{
+    border: 2px black solid;
+    background-color: yellow;
+    height : 100px;
+    width : 300px;
+
+}
+th{
+    border: 1px greenyellow solid;
+    background-color: blue;
+    ;
+}
+td{
+    text-align: center;
+    size: 5px;
+
+    border: 1px black solid;
+}
+tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+
+#gradient
+{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    /*background-image: linear-gradient(  45deg ,red , yellow 50%, green,blueviolet 70%);
+    /* background-image: radial-gradient( red , yellow 50%, green,blueviolet 70%);
+    
+    background-image: conic-gradient(  to right,red , yellow 50%, green,blueviolet 70%);    
+
+    backgra                         (to left,red , yellow 50%, green,blueviolet 70%);
+    background-image: repeating-linear-gradient(  45deg,red , yellow 50%, green,blueviolet 70%);      
+    */
+    /*background-image: repeating-linear-gradient( to bottom, red , yellow 10%, green, blueviolet 10%);
+    */
+    background-image: radial-gradient(ellipse at top, red , yellow 50%, green),
+                        radial-gradient( ellipse at bottom, red , yellow 50%, green),
+                        radial-gradient( circle at center, blueviolet , yellow 50%, green),
+                        radial-gradient( circle at center, blueviolet , yellow 50%, green);
+                        background-image: repeating-radial-gradient(ellipse at top, red , yellow 10%, green);
+}
+
+
+                    
+
+
+/*div class ="logo"*/
+
+.box
+{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: orange;
+    margin : 20px;
+    border-radius: 50%;
+    
+}
+
+.b1
+{
+    background-image: conic-gradient( red , yellow 50%, green,blueviolet 70%);
+}
+
+.b2
+{
+    background-image: conic-gradient(red, yellow, green);
+
+}
+.b3
+{
+    background-image: conic-gradient( red , yellow 50%, green,blueviolet);
+}
+
+.b4
+{
+    background-image: conic-gradient(at 40% 50%, red 50%, yellow , green );
+}
+
+.b5
+{
+    background-image:  repeating-conic-gradient( red , yellow 50%, green,blueviolet 70%);
+}
+.b6
+{
+    background-image : repeating-conic-gradient(rgba(0,0,0,0) 0deg, rgba(0,0,0,0) 20deg, rgba(0,0,0,0.5) 20deg, rgba(0,0,0,0.5) 20deg, rgba(0,0,0,0) 40deg);
+}
+
+.b7
+{
+    background-image: repeating-conic-gradient(yellow 0deg,yellow 90deg, black 90deg,black 180deg);
+    background-size: 20px 20px;
+}
+ 
+.b8
+{
+    background-image: repeating-conic-gradient(from 45deg,red 0deg,red 90deg,blue 90deg,blue 180deg,green 180deg,yellow 180deg , yellow 270deg,blue 270deg,blue 360deg);
+}
+

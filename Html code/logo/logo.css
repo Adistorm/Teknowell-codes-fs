@@ -1,0 +1,32 @@
+.logo
+{
+    height: 500px;
+    width: 500px;
+    margin:0 auto;
+
+} 
+
+.logo h1
+{ 
+    width: 400px;
+    height: 400px;
+    font-size: 20em;
+    text-align: center;
+    background-image: conic-gradient(from -45deg ,red 0deg,red 90deg,blue 90deg,blue 180deg, yellow 180deg,yellow 270deg, green 270deg,green 360deg );
+    font-family: facile sans;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.logo {
+    position: relative;
+    width: 500px;
+    padding: 50px;
+    border-radius: 50px;
+    background: rgba(104, 111, 115, 0.892);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+} 
+

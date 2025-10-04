@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #e2c20cd0;
+}
+h1{
+    background-color: rgb(228, 200, 20);
+    padding: 15px;
+    text-shadow: #f7d40cd0 2px 2px 8px;
+    color:aliceblue;
+    text-align: center;
+}
+
+ul{
+    background-color: rgb(26, 25, 25);
+  
+}
+ ul li{
+    background-color: rgb(230, 190, 10);
+    display : inline-block;
+    padding: 15px;
+    position:sticky;
+    
+ }
+
+ ul li:hover {
+    background-color: green;
+    color: white;
+    padding-left: 25px;
+    transition: 1s;
+    
+ }
+
